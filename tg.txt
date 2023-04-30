@@ -1,0 +1,60 @@
+
+L2:
+JMP L0
+MOV c  r12
+ADD r12  d t0
+L3:
+MOV t0 r0
+MOV r0 c
+MOV a r1
+MOV  r1 t1
+L4:
+ADD r1   1 a
+MOV a r2
+MOV  r2 t2
+L5:
+SUB r2   1 a
+MOV 0 r12
+MOV r12 a
+L0:
+JMP L1
+MOV a r12
+CMP r12 L2
+JE L2
+MOV a r12
+CMP r12 2
+JE L3
+MOV a r12
+CMP r12 3
+JE L4
+L1:
+JMP L5
+MOV c  r12
+ADD r12  d t3
+MOV t3 r3
+MOV r3 c
+MOV 15 r4
+MOV  r4 t4
+MOV t4 r4
+MOV r4 e
+JMP L6
+MOV d r5
+MOV  r5 t5
+MOV t5 r5
+MOV r5 f
+MOV a r12
+CMP r12 b
+JE L1
+L7:
+JMP L7
+MOV b r12
+CMP r12 0
+JNE L8
+L8:
+JMP L6
+MOV c r12
+CMP r12 0
+JNE L1
+L6:
+JMP L6
+RET
